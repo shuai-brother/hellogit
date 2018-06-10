@@ -28,6 +28,8 @@ int main()
         {
 		cin>>stu[++num].name;
 		cin>>stu[num].sex>>stu[num].s;
+		if(stu[num].name.length())stu[num].name.pop_back();
+		if(stu[num].sex.length())stu[num].sex.pop_back();
                 sum+=stu[num].s;
                 if(stu[num].sex[0]=='F')fsum+=stu[num].s,fnum++;
                 else msum+=stu[num].s,mnum++;
@@ -39,7 +41,7 @@ int main()
         cout<<endl<<"Female av score: "<<fsum;
         cout<<endl<<"Male av score: "<<msum<<endl;
         for(int i=1;i<=num;i++)
-                cout<<stu[i].name<<stu[i].sex<<stu[i].s<<endl;
+                cout<<stu[i].name<<" "<<stu[i].sex<<" "<<stu[i].s<<endl;
         return 0;
 }
 
